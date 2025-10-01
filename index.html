@@ -3,51 +3,134 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="CastnFish - Your ultimate destination for fishing gear, boating equipment, water sports essentials, and outdoor adventure guidance.">
+  <meta name="description" content="CastnFish - Your ultimate destination for fishing gear, boating equipment, water sports essentials.">
   <title>CastnFish | Water Recreation Hub</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="/css/styles.css">
-  <link rel="stylesheet" href="/css/activity-highlight.css">
-  <link rel="stylesheet" href="/css/enhanced-styles.css">
-  <link rel="stylesheet" href="/css/image-optimization.css">
-  <link rel="stylesheet" href="/css/content-sections.css">
-  <link rel="stylesheet" href="/css/sections.css">
-  <link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
-  <script src='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
-  <script src="/js/content-interactions.js" defer>
 </head>
 <body>
   <!-- Header -->
-  <header>
+  <header class="header">
     <div class="container">
-      <a href="/" class="logo">CastnFish</a>
-      <nav class="nav-menu">
-        <a href="/shop" class="nav-link">Shop</a>
-        <a href="/learn" class="nav-link">Learn</a>
-        <a href="/explore" class="nav-link">Explore</a>
-        <a href="/community" class="nav-link">Community</a>
-        <a href="/media" class="nav-link">Media</a>
-        <a href="/about" class="nav-link">About</a>
+      <nav class="nav">
+        <a href="/" class="nav-brand">CastnFish</a>
+        <div class="nav-links">
+          <a href="/shop">Shop</a>
+          <a href="/learn">Learn</a>
+          <a href="/explore">Explore</a>
+          <a href="/community">Community</a>
+        </div>
+        <div class="nav-actions">
+          <a href="/cart" class="cart-icon">
+            <span class="cart-count">0</span>
+          </a>
+          <a href="/account" class="account-icon"></a>
+        </div>
       </nav>
-      <div class="nav-actions">
-        <div class="search-bar">
-          <input type="text" placeholder="Search gear, guides, destinations...">
-          <button class="search-button">
-            <i class="fas fa-search"></i>
-          </button>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="shop-container">
+        <!-- Filters -->
+        <div class="filters">
+          <h2>Fishing Gear</h2>
+          <p class="subtitle">Curated gear for every angler, from beginner to pro.</p>
+          
+          <div class="filter-group">
+            <h3>Activity</h3>
+            <label class="radio">
+              <input type="radio" name="activity" value="fishing" checked>
+              <span>Fishing</span>
+            </label>
+            <label class="radio">
+              <input type="radio" name="activity" value="boating">
+              <span>Boating</span>
+            </label>
+            <label class="radio">
+              <input type="radio" name="activity" value="water-sports">
+              <span>Water Sports</span>
+            </label>
+            <label class="radio">
+              <input type="radio" name="activity" value="camping">
+              <span>Camping</span>
+            </label>
+          </div>
+
+          <div class="filter-group">
+            <h3>Price Range</h3>
+            <div class="range-slider">
+              <input type="range" min="0" max="500" value="250">
+              <div class="range-labels">
+                <span>$0</span>
+                <span>$500</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <h3>Brand</h3>
+            <input type="text" class="brand-search" placeholder="Search brands">
+          </div>
+
+          <div class="filter-group">
+            <h3>Skill Level</h3>
+            <label class="checkbox">
+              <input type="checkbox" name="skill" value="beginner">
+              <span>Beginner</span>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" name="skill" value="intermediate">
+              <span>Intermediate</span>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" name="skill" value="advanced">
+              <span>Advanced</span>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" name="skill" value="professional">
+              <span>Professional</span>
+            </label>
+          </div>
         </div>
-        <a href="/cart" class="cart-link">
-          <i class="fas fa-shopping-cart"></i>
-          <span class="cart-count">0</span>
-        </a>
-        <div class="auth-links">
-          <a href="/login" class="login-link">Sign In</a>
-          <a href="/register" class="register-link">Join</a>
+
+        <!-- Products -->
+        <div class="products">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="/images/products/weekend-lake-kit.jpg" alt="Weekend Lake Kit">
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">Weekend Lake Kit – Save 20%</h3>
+              <p>Everything you need for a perfect weekend of fishing.</p>
+              <ul class="product-features">
+                <li>Premium Spinning Rod/Reel Combo</li>
+                <li>Tackle Box with Essential Lures</li>
+                <li>Fishing Line & Tools</li>
+                <li>Waterproof Gear Bag</li>
+              </ul>
+              <div class="product-price">
+                <span class="price-original">$299.99</span>
+                <span>$239.99</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <button class="mobile-menu-btn">
-          <i class="fas fa-bars"></i>
-        </button>
+      </section>
+    </div>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+      <div class="container">
+        <h3>Get Weekly Gear Deals</h3>
+        <div class="email-signup">
+          <input type="email" placeholder="Enter your email">
+          <button>Sign Up</button>
+        </div>
+      </div>
+    </section>
+  </main>
       </div>
     </div>
   </header>
