@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View event details and register for community events">
+    <title>Event Details | CastnFish Community</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/calendar.css">
+</head>
+<body>
+    <main class="event-details-main">
+        <div class="event-hero">
+            <div class="container">
+                <div class="event-type-badge">
+                    <i class="fas fa-trophy"></i>
+                    <span>Tournament</span>
+                </div>
+                <h1 class="event-title">Loading event...</h1>
+                <div class="event-meta">
+                    <div class="meta-item">
+                        <i class="fas fa-calendar"></i>
+                        <span class="event-date">Date loading...</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span class="event-location">Location loading...</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-users"></i>
+                        <span class="event-attendance">0 attending</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="event-layout">
+                <div class="event-main-content">
+                    <section class="event-description">
+                        <h2>About This Event</h2>
+                        <div class="description-content">
+                            Loading description...
+                        </div>
+                    </section>
+
+                    <section class="event-rules">
+                        <h2>Rules & Requirements</h2>
+                        <div class="rules-content">
+                            Loading rules...
+                        </div>
+                    </section>
+
+                    <section class="event-location">
+                        <h2>Location</h2>
+                        <div id="eventMap" class="event-map">
+                            <!-- Map will be inserted here -->
+                        </div>
+                        <div class="location-details">
+                            <p class="venue-name">Loading venue...</p>
+                            <p class="venue-address">Loading address...</p>
+                        </div>
+                    </section>
+
+                    <section class="event-attendees">
+                        <h2>Who's Going</h2>
+                        <div class="attendees-grid">
+                            <!-- Attendee avatars will be populated by JavaScript -->
+                        </div>
+                    </section>
+
+                    <section class="event-discussion">
+                        <h2>Discussion</h2>
+                        <div class="discussion-thread">
+                            <!-- Comments will be populated by JavaScript -->
+                        </div>
+                        <form class="comment-form">
+                            <textarea placeholder="Add to the discussion..."></textarea>
+                            <button type="submit" class="btn btn-primary">Post Comment</button>
+                        </form>
+                    </section>
+                </div>
+
+                <aside class="event-sidebar">
+                    <div class="registration-card">
+                        <div class="registration-status">
+                            <span class="spots-left">Loading availability...</span>
+                        </div>
+                        <div class="registration-deadline">
+                            <i class="fas fa-clock"></i>
+                            <span>Registration closes: <span class="deadline-date">Loading...</span></span>
+                        </div>
+                        <button id="registerButton" class="btn btn-primary btn-large">
+                            Register Now
+                        </button>
+                        <div class="registration-notes">
+                            <p class="note"><i class="fas fa-info-circle"></i> Registration requires approval</p>
+                            <p class="note"><i class="fas fa-calendar-check"></i> You can cancel up to 24h before</p>
+                        </div>
+                    </div>
+
+                    <div class="organizer-card">
+                        <h3>Organized by</h3>
+                        <div class="organizer-info">
+                            <img src="/images/avatars/default.png" alt="Organizer avatar" class="organizer-avatar">
+                            <div class="organizer-details">
+                                <p class="organizer-name">Loading organizer...</p>
+                                <p class="organizer-events">Loading event count...</p>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline">Contact Organizer</button>
+                    </div>
+
+                    <div class="share-card">
+                        <h3>Share Event</h3>
+                        <div class="share-buttons">
+                            <button class="share-btn facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </button>
+                            <button class="share-btn twitter">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn linkedin">
+                                <i class="fab fa-linkedin-in"></i>
+                            </button>
+                            <button class="share-btn copy-link" title="Copy link">
+                                <i class="fas fa-link"></i>
+                            </button>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <div id="registrationModal" class="modal">
+        <div class="modal-content">
+            <h2>Register for Event</h2>
+            <form id="registrationForm">
+                <div class="form-group">
+                    <label for="additionalNotes">Additional Notes</label>
+                    <textarea id="additionalNotes" name="notes" 
+                              placeholder="Any specific requirements or questions?"></textarea>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Submit Registration</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="/js/shared.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js"></script>
+    <script src="/js/event-details.js"></script>
+</body>
+</html>
