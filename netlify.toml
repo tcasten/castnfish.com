@@ -1,0 +1,5 @@
+# Netlify configuration for static site deployment
+[build]
+publish = "."
+# No base directory specified; site files are in the root
+# No build command needed for pure HTML/CSS/JS
