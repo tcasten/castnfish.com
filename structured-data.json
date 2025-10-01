@@ -1,0 +1,65 @@
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Cast 'n Fish",
+  "description": "Professional fishing guides, charters, and equipment rental. Experience the best fishing adventures with our expert team.",
+  "url": "https://castnfish.com",
+  "telephone": "(555) 123-FISH",
+  "email": "info@castnfish.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "123 Harbor Drive",
+    "addressLocality": "Fishing Bay",
+    "addressRegion": "FL",
+    "postalCode": "12345",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "30.123456",
+    "longitude": "-85.123456"
+  },
+  "openingHours": "Mo-Su 06:00-20:00",
+  "priceRange": "$$",
+  "image": "https://castnfish.com/images/logo.jpg",
+  "sameAs": [
+    "https://facebook.com/castnfish",
+    "https://instagram.com/castnfish",
+    "https://twitter.com/castnfish"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Fishing Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Deep Sea Charter",
+          "description": "Full day and half day deep sea fishing trips with experienced crew and all equipment provided."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Freshwater Guide",
+          "description": "Expert freshwater fishing guides for bass, trout, and pan fish in local lakes and rivers."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Equipment Rental",
+          "description": "High-quality fishing gear rental including rods, reels, tackle, and bait."
+        }
+      }
+    ]
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "127"
+  }
+}
