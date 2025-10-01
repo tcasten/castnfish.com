@@ -4,12 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cast 'n Fish - Premium Water Recreation Equipment</title>
-    <meta name="description" content="Discover premium water recreation equipment. Expert recommendations for fishing, boating, water sports, and camping gear.">
-    <link rel="stylesheet" href="css/main.css">
+    <title>CastnFish.com - Your Ultimate Water Recreation Hub</title>
+    <meta name="description" content="Expert guides, premium gear, and community for fishing, boating, water sports, and camping. Join the #1 water recreation community.">
+    <link rel="stylesheet" href="css/core.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="fishing gear, boating equipment, water sports, camping, fishing guides, boating tips">
+    <meta property="og:title" content="CastnFish.com - Your Ultimate Water Recreation Hub">
+    <meta property="og:description" content="Expert guides, premium gear, and community for all your water adventures.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://castnfish.com">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" href="/favicon.png">
             
             <!-- Search Bar -->
             <div class="search-container">
@@ -146,16 +155,49 @@
     </script>
 </head>
 <body>
+    <!-- Global Search -->
+    <div id="search-modal" class="search-modal hidden">
+        <div class="search-container">
+            <input type="search" class="search-input" placeholder="Search gear, guides, or destinations...">
+            <button class="search-button">
+                <svg width="20" height="20" fill="none" stroke="currentColor">
+                    <path d="M19 19l-4.35-4.35M17 9A8 8 0 111 9a8 8 0 0116 0z" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
     <nav class="nav">
-        <div class="container nav-inner">
-            <a href="#" class="nav-brand">Cast 'n Fish</a>
-            <div class="nav-links">
-                <a href="#fishing" class="nav-link">Fishing</a>
-                <a href="#boating" class="nav-link">Boating</a>
-                <a href="#watersports" class="nav-link">Water Sports</a>
-                <a href="#camping" class="nav-link">Camping</a>
-                <a href="#tips" class="nav-link">Tips & Guides</a>
+        <div class="container nav-container">
+            <a href="/" class="nav-brand">CastnFish</a>
+            
+            <ul class="nav-menu">
+                <li><a href="/shop" class="nav-link">Shop</a></li>
+                <li><a href="/learn" class="nav-link">Learn</a></li>
+                <li><a href="/explore" class="nav-link">Explore</a></li>
+                <li><a href="/community" class="nav-link">Community</a></li>
+                <li><a href="/media" class="nav-link">Media</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="search-toggle" aria-label="Search">
+                    <svg width="20" height="20" fill="none" stroke="currentColor">
+                        <path d="M19 19l-4.35-4.35M17 9A8 8 0 111 9a8 8 0 0116 0z" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <a href="/account" class="nav-link" aria-label="Account">
+                    <svg width="20" height="20" fill="none" stroke="currentColor">
+                        <path d="M10 11a4 4 0 100-8 4 4 0 000 8zM3 19c0-3.866 3.134-7 7-7s7 3.134 7 7" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </a>
             </div>
+
+            <button class="nav-toggle md:hidden" aria-label="Menu">
+                <svg width="24" height="24" fill="none" stroke="currentColor">
+                    <path d="M4 6h16M4 12h16M4 18h16" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
         </div>
     </nav>
 
