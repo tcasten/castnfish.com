@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Create a new discussion topic in the CastnFish community forums.">
+  <title>New Topic | CastnFish Forums</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/forum.css">
+  <link rel="stylesheet" href="/css/editor.css">
+</head>
+<body>
+  <main class="forum-main">
+    <div class="forum-header">
+      <div class="container">
+        <div class="header-content">
+          <div class="header-text">
+            <h1>Create New Topic</h1>
+            <p>Share your knowledge and start a discussion</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="new-topic-layout">
+        <form class="topic-form" id="newTopicForm">
+          <div class="form-group">
+            <label for="topicTitle">Title</label>
+            <input type="text" id="topicTitle" name="title" 
+              placeholder="What would you like to discuss?" required>
+          </div>
+
+          <div class="form-group">
+            <label for="topicCategory">Category</label>
+            <select id="topicCategory" name="category" required>
+              <option value="">Select a category</option>
+              <option value="fishing">Fishing</option>
+              <option value="boating">Boating</option>
+              <option value="camping">Camping</option>
+              <option value="gear">Gear</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="topicContent">Content</label>
+            <div class="editor-toolbar">
+              <button type="button" data-format="bold" title="Bold">
+                <i class="fas fa-bold"></i>
+              </button>
+              <button type="button" data-format="italic" title="Italic">
+                <i class="fas fa-italic"></i>
+              </button>
+              <button type="button" data-format="link" title="Insert Link">
+                <i class="fas fa-link"></i>
+              </button>
+              <button type="button" data-format="image" title="Insert Image">
+                <i class="fas fa-image"></i>
+              </button>
+              <button type="button" data-format="list-ul" title="Bullet List">
+                <i class="fas fa-list-ul"></i>
+              </button>
+              <button type="button" data-format="list-ol" title="Numbered List">
+                <i class="fas fa-list-ol"></i>
+              </button>
+              <button type="button" data-format="quote" title="Quote">
+                <i class="fas fa-quote-right"></i>
+              </button>
+              <button type="button" data-format="code" title="Code">
+                <i class="fas fa-code"></i>
+              </button>
+            </div>
+            <div class="editor-container">
+              <textarea id="topicContent" name="content" 
+                placeholder="Share your thoughts, questions, or experiences..." required></textarea>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="topicTags">Tags</label>
+            <div class="tags-input">
+              <input type="text" id="topicTags" 
+                placeholder="Add tags (press Enter after each tag)">
+              <div class="tags-container"></div>
+            </div>
+            <small class="form-help">Add up to 5 tags to help others find your topic</small>
+          </div>
+
+          <div class="form-group">
+            <label class="checkbox-label">
+              <input type="checkbox" name="notifications" checked>
+              Notify me when someone replies
+            </label>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" class="btn-preview">Preview</button>
+            <button type="submit" class="btn-publish">Publish Topic</button>
+          </div>
+        </form>
+
+        <div class="topic-preview" style="display: none;">
+          <div class="preview-header">
+            <h2>Preview</h2>
+            <button class="btn-close-preview">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <div class="preview-content"></div>
+        </div>
+
+        <aside class="topic-sidebar">
+          <div class="guidelines-box">
+            <h3><i class="fas fa-lightbulb"></i> Posting Guidelines</h3>
+            <ul>
+              <li>Be respectful and constructive</li>
+              <li>Use clear and descriptive titles</li>
+              <li>Stay on topic and relevant to the category</li>
+              <li>Include details to help others understand</li>
+              <li>Use appropriate formatting for readability</li>
+              <li>Check for similar topics before posting</li>
+            </ul>
+          </div>
+
+          <div class="formatting-help">
+            <h3><i class="fas fa-keyboard"></i> Formatting Help</h3>
+            <div class="formatting-examples">
+              <div class="example">
+                <code>**text**</code>
+                <span>Bold text</span>
+              </div>
+              <div class="example">
+                <code>*text*</code>
+                <span>Italic text</span>
+              </div>
+              <div class="example">
+                <code>[link](url)</code>
+                <span>Hyperlink</span>
+              </div>
+              <div class="example">
+                <code>![alt](image-url)</code>
+                <span>Image</span>
+              </div>
+              <div class="example">
+                <code>```code```</code>
+                <span>Code block</span>
+              </div>
+              <div class="example">
+                <code>> quote</code>
+                <span>Blockquote</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="similar-topics">
+            <h3><i class="fas fa-search"></i> Similar Topics</h3>
+            <div class="similar-topics-list">
+              <!-- Dynamically populated based on title -->
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+  <script src="/js/editor.js"></script>
+</body>
+</html>

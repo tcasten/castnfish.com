@@ -1,0 +1,199 @@
+/* Price Tracker Tool CSS */
+.price-tracker-header {
+  background: var(--primary-gradient);
+  color: white;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.price-tracker-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.price-tracker-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 4rem 0;
+}
+
+.tracker-feature {
+  text-align: center;
+  padding: 2rem;
+  background: var(--background-light);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.tracker-feature i {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.tracker-feature h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+/* Alert Setup Form */
+.alert-setup {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.alert-setup h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.alert-type {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.alert-option {
+  position: relative;
+}
+
+.alert-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.alert-option label {
+  display: block;
+  padding: 1rem;
+  background: var(--background-light);
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.alert-option input[type="radio"]:checked + label {
+  border-color: var(--primary-color);
+  background: var(--primary-light);
+}
+
+/* Price History Chart */
+.price-history {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.price-history h2 {
+  margin-bottom: 1.5rem;
+}
+
+.chart-container {
+  height: 400px;
+  margin-bottom: 2rem;
+}
+
+.chart-legend {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+/* Alert List */
+.active-alerts {
+  margin-top: 3rem;
+}
+
+.alert-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.alert-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: var(--background-light);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.alert-info h3 {
+  font-size: 1.125rem;
+  margin-bottom: 0.25rem;
+}
+
+.alert-meta {
+  color: var(--text-light);
+  font-size: 0.875rem;
+}
+
+.alert-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.alert-actions button {
+  padding: 0.5rem;
+  border: none;
+  background: none;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.alert-actions button:hover {
+  color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .price-tracker-features {
+    grid-template-columns: 1fr;
+  }
+
+  .alert-type {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-container {
+    height: 300px;
+  }
+
+  .chart-legend {
+    flex-wrap: wrap;
+  }
+}

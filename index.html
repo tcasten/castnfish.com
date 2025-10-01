@@ -20,15 +20,23 @@
         <a href="/explore" class="nav-link">Explore</a>
         <a href="/community" class="nav-link">Community</a>
         <a href="/media" class="nav-link">Media</a>
+        <a href="/about" class="nav-link">About</a>
       </nav>
       <div class="nav-actions">
-        <button class="search-toggle">
-          <i class="fas fa-search"></i>
-        </button>
+        <div class="search-bar">
+          <input type="text" placeholder="Search gear, guides, destinations...">
+          <button class="search-button">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
         <a href="/cart" class="cart-link">
           <i class="fas fa-shopping-cart"></i>
           <span class="cart-count">0</span>
         </a>
+        <div class="auth-links">
+          <a href="/login" class="login-link">Sign In</a>
+          <a href="/register" class="register-link">Join</a>
+        </div>
         <button class="mobile-menu-btn">
           <i class="fas fa-bars"></i>
         </button>
@@ -36,23 +44,81 @@
     </div>
   </header>
 
+  <!-- Search Overlay -->
+  <div class="search-overlay">
+    <div class="container">
+      <div class="search-header">
+        <input type="text" placeholder="Search gear, guides, destinations..." class="search-input">
+        <button class="close-search">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="search-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="gear">Gear</button>
+        <button class="filter-btn" data-filter="guides">Guides</button>
+        <button class="filter-btn" data-filter="destinations">Destinations</button>
+      </div>
+      <div class="search-results">
+        <!-- Results will be dynamically populated -->
+      </div>
+    </div>
+  </div>
+
   <!-- Hero -->
   <section class="hero">
     <div class="container">
       <h1>Your #1 Destination for Water Recreation</h1>
-      <p>Shop premium gear, learn expert skills, explore destinations, and connect with a passionate community of anglers, boaters, and water lovers.</p>
-      <a href="/shop" class="cta-button">Explore Our Gear</a>
+      <p>Shop gear, learn skills, plan trips, and connect with fellow water lovers.</p>
+      <div class="cta-group">
+        <a href="/shop" class="cta-button primary">Shop Now</a>
+        <a href="/learn" class="cta-button secondary">Learn More</a>
+        <a href="/community" class="cta-button secondary">Join Community</a>
+      </div>
+    </div>
+    <div class="hero-overlay"></div>
+  </section>
+
+  <!-- Shop Categories -->
+  <section class="shop-categories">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Explore Our Categories</h2>
+        <p class="section-subtitle">Everything you need for your water adventures</p>
+      </div>
+      <div class="category-grid">
+        <a href="/shop/fishing" class="category-tile">
+          <div class="category-icon">🎣</div>
+          <h3>Fishing</h3>
+          <p>Rods, reels, tackle & more</p>
+        </a>
+        <a href="/shop/boating" class="category-tile">
+          <div class="category-icon">🚤</div>
+          <h3>Boating</h3>
+          <p>Kayaks, safety gear & accessories</p>
+        </a>
+        <a href="/shop/water-sports" class="category-tile">
+          <div class="category-icon">🏄</div>
+          <h3>Water Sports</h3>
+          <p>Paddleboards, wakeboards & diving</p>
+        </a>
+        <a href="/shop/camping" class="category-tile">
+          <div class="category-icon">⛺</div>
+          <h3>Camping by Water</h3>
+          <p>Tents, cooking & waterproof gear</p>
+        </a>
+      </div>
     </div>
   </section>
 
-  <!-- Featured Products -->
-  <section class="featured-products">
+  <!-- Seasonal Highlights -->
+  <section class="seasonal-highlights">
     <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Featured Gear</h2>
-        <p class="section-subtitle">Curated selections for every water adventure</p>
+      <div class="seasonal-banner">
+        <h2>Fall Fishing Essentials</h2>
+        <p>Gear up for the perfect autumn adventure</p>
       </div>
-      <div class="grid">
+      <div class="product-carousel">
         <div class="card">
           <span class="card-badge">Popular</span>
           <img src="/images/fishing-bundle.jpg" alt="Beginner Fishing Bundle">
@@ -63,13 +129,14 @@
               <span class="price">$199</span>
               <span class="original-price">$249</span>
             </div>
-            <a href="/shop/bundles/beginner-fishing" class="card-link">View Bundle →</a>
+            <button class="quick-add">Add to Cart</button>
           </div>
         </div>
-        <!-- More featured products -->
+        <!-- More product cards will be dynamically added -->
       </div>
-      <div class="section-footer">
-        <a href="/shop" class="cta-button">View All Products</a>
+      <div class="carousel-controls">
+        <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+        <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
       </div>
     </div>
   </section>
@@ -81,23 +148,49 @@
         <h2 class="section-title">Learn from the Experts</h2>
         <p class="section-subtitle">Comprehensive guides and tutorials for all skill levels</p>
       </div>
-      <div class="grid">
-        <div class="card">
-          <img src="/images/bass-fishing-guide.jpg" alt="Bass Fishing Guide">
-          <div class="card-content">
-            <h3 class="card-title">Beginner's Guide to Bass Fishing</h3>
-            <p class="card-text">Master the fundamentals and start catching bass with confidence.</p>
-            <a href="/learn/fishing/beginners-guide-bass" class="card-link">Read Guide →</a>
+      <div class="featured-guides">
+        <article class="guide-card">
+          <img src="/images/bass-fishing-guide.jpg" alt="Beginner's Guide to Bass Fishing">
+          <div class="guide-content">
+            <h3>Beginner's Guide to Bass Fishing</h3>
+            <p>Master the fundamentals of bass fishing with our comprehensive guide.</p>
+            <div class="guide-meta">
+              <span><i class="fas fa-clock"></i> 15 min read</span>
+              <span><i class="fas fa-star"></i> 4.9/5</span>
+            </div>
+            <a href="/learn/fishing/beginners-guide-bass" class="guide-link">Read Guide →</a>
           </div>
-        </div>
-        <!-- More guides -->
+        </article>
+        <article class="guide-card">
+          <img src="/images/boating-safety.jpg" alt="Boating Safety 101">
+          <div class="guide-content">
+            <h3>Boating Safety 101</h3>
+            <p>Essential safety tips and regulations for a secure boating experience.</p>
+            <div class="guide-meta">
+              <span><i class="fas fa-clock"></i> 12 min read</span>
+              <span><i class="fas fa-star"></i> 4.8/5</span>
+            </div>
+            <a href="/learn/boating/safety-101" class="guide-link">Read Guide →</a>
+          </div>
+        </article>
+        <article class="guide-card">
+          <img src="/images/paddleboarding.jpg" alt="Paddleboarding Basics">
+          <div class="guide-content">
+            <h3>Paddleboarding Basics</h3>
+            <p>Get started with paddleboarding: techniques, gear, and safety tips.</p>
+            <div class="guide-meta">
+              <span><i class="fas fa-clock"></i> 10 min read</span>
+              <span><i class="fas fa-star"></i> 4.7/5</span>
+            </div>
+            <a href="/learn/water-sports/paddleboarding-basics" class="guide-link">Read Guide →</a>
+          </div>
+        </article>
       </div>
-      <div class="video-section">
-        <h3>Latest Tutorials</h3>
-        <div class="video-grid">
-          <!-- Video thumbnails -->
-        </div>
+      <div class="section-footer">
+        <a href="/learn" class="cta-button">View All Guides</a>
       </div>
+    </div>
+  </section>
     </div>
   </section>
 

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Share your fishing adventures and read trip reports from fellow anglers.">
+  <title>Trip Reports | CastnFish Community</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/reports.css">
+</head>
+<body>
+  <main class="reports-main">
+    <div class="reports-header">
+      <div class="container">
+        <div class="header-content">
+          <div class="header-text">
+            <h1>Trip Reports</h1>
+            <p>Share your adventures and discover new fishing spots</p>
+          </div>
+          <a href="/community/reports/new" class="btn-submit-report">
+            <i class="fas fa-plus"></i> Submit Report
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="reports-layout">
+        <div class="reports-filters">
+          <div class="filter-section">
+            <h2>Filter Reports</h2>
+            <form class="filter-form">
+              <div class="form-group">
+                <label>Location Type</label>
+                <div class="checkbox-group">
+                  <label><input type="checkbox" value="lake"> Lakes</label>
+                  <label><input type="checkbox" value="river"> Rivers</label>
+                  <label><input type="checkbox" value="ocean"> Ocean</label>
+                  <label><input type="checkbox" value="pond"> Ponds</label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Species</label>
+                <div class="checkbox-group">
+                  <label><input type="checkbox" value="bass"> Bass</label>
+                  <label><input type="checkbox" value="trout"> Trout</label>
+                  <label><input type="checkbox" value="salmon"> Salmon</label>
+                  <label><input type="checkbox" value="pike"> Pike</label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Time Period</label>
+                <select name="timeframe">
+                  <option value="week">Past Week</option>
+                  <option value="month">Past Month</option>
+                  <option value="3months">Past 3 Months</option>
+                  <option value="year">Past Year</option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn-apply-filters">Apply Filters</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="reports-content">
+          <div class="reports-sorting">
+            <div class="sort-options">
+              <button class="sort-btn active">Latest</button>
+              <button class="sort-btn">Most Viewed</button>
+              <button class="sort-btn">Top Rated</button>
+            </div>
+            <div class="view-options">
+              <button class="view-btn active"><i class="fas fa-th-list"></i></button>
+              <button class="view-btn"><i class="fas fa-th-large"></i></button>
+            </div>
+          </div>
+
+          <div class="reports-grid">
+            <article class="report-card">
+              <div class="report-image">
+                <img src="/images/reports/lake-travis.jpg" alt="Lake Travis Fishing">
+                <div class="report-badge">Featured</div>
+              </div>
+              <div class="report-content">
+                <div class="report-meta">
+                  <span class="location"><i class="fas fa-map-marker-alt"></i> Lake Travis, TX</span>
+                  <span class="date"><i class="fas fa-calendar"></i> Oct 1, 2025</span>
+                </div>
+                <h2><a href="/community/reports/123">Epic Bass Fishing at Lake Travis</a></h2>
+                <div class="report-stats">
+                  <div class="stat">
+                    <i class="fas fa-fish"></i>
+                    <span>8 catches</span>
+                  </div>
+                  <div class="stat">
+                    <i class="fas fa-clock"></i>
+                    <span>6 hours</span>
+                  </div>
+                  <div class="stat">
+                    <i class="fas fa-thermometer-half"></i>
+                    <span>72°F</span>
+                  </div>
+                </div>
+                <p class="report-excerpt">Had an amazing day on Lake Travis with multiple large bass caught using...</p>
+                <div class="report-footer">
+                  <div class="author">
+                    <img src="/images/avatars/john.jpg" alt="John's avatar">
+                    <span>By John D.</span>
+                  </div>
+                  <div class="engagement">
+                    <span><i class="fas fa-comment"></i> 12</span>
+                    <span><i class="fas fa-heart"></i> 45</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- More report cards -->
+          </div>
+
+          <div class="reports-map">
+            <h2>Reports Map</h2>
+            <div id="reportsMap"></div>
+          </div>
+
+          <div class="pagination">
+            <button class="page-btn prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="page-btn active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <span class="page-dots">...</span>
+            <button class="page-btn">12</button>
+            <button class="page-btn next"><i class="fas fa-chevron-right"></i></button>
+          </div>
+        </div>
+
+        <aside class="reports-sidebar">
+          <div class="trending-spots">
+            <h3>Trending Spots</h3>
+            <div class="trending-list">
+              <div class="trending-item">
+                <img src="/images/spots/spot1.jpg" alt="Popular fishing spot">
+                <div class="trending-info">
+                  <h4>Lake Austin</h4>
+                  <p>15 recent reports</p>
+                </div>
+              </div>
+              <!-- More trending spots -->
+            </div>
+          </div>
+
+          <div class="recent-catches">
+            <h3>Recent Catches</h3>
+            <div class="catches-grid">
+              <div class="catch-item">
+                <img src="/images/catches/catch1.jpg" alt="Recent catch">
+                <div class="catch-info">
+                  <span class="species">Largemouth Bass</span>
+                  <span class="weight">6.5 lbs</span>
+                </div>
+              </div>
+              <!-- More catch items -->
+            </div>
+          </div>
+
+          <div class="weather-widget">
+            <h3>Local Weather</h3>
+            <div class="weather-content">
+              <!-- Weather information populated by JavaScript -->
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+  <script src="/js/reports.js"></script>
+</body>
+</html>

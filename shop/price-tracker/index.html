@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Track prices and get alerts for your favorite fishing gear, boating equipment, and water sports accessories.">
+  <title>Price Tracker | CastnFish</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/price-tracker.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <!-- Header content from main template -->
+  </header>
+
+  <!-- Price Tracker Header -->
+  <section class="price-tracker-header">
+    <div class="container">
+      <h1>Price Tracker</h1>
+      <p>Never miss a deal on your favorite gear</p>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="price-tracker-features">
+    <div class="container">
+      <div class="tracker-feature">
+        <i class="fas fa-bell"></i>
+        <h3>Price Drop Alerts</h3>
+        <p>Get notified when prices drop on your watched items.</p>
+      </div>
+      <div class="tracker-feature">
+        <i class="fas fa-chart-line"></i>
+        <h3>Price History</h3>
+        <p>View historical prices to make informed decisions.</p>
+      </div>
+      <div class="tracker-feature">
+        <i class="fas fa-tag"></i>
+        <h3>Deal Alerts</h3>
+        <p>First to know about special offers and discounts.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Alert Setup -->
+  <section class="alert-setup">
+    <div class="container">
+      <form id="alertForm" class="alert-form">
+        <h2>Create Price Alert</h2>
+        
+        <div class="form-group">
+          <label for="productSearch">Product</label>
+          <input type="text" id="productSearch" placeholder="Search for a product...">
+          <input type="hidden" id="productId" name="productId">
+        </div>
+
+        <div class="form-group">
+          <label>Alert Type</label>
+          <div class="alert-type">
+            <div class="alert-option">
+              <input type="radio" id="specificPrice" name="alertType" value="specific" checked>
+              <label for="specificPrice">Specific Price</label>
+            </div>
+            <div class="alert-option">
+              <input type="radio" id="priceDrop" name="alertType" value="drop">
+              <label for="priceDrop">Price Drop %</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group" id="targetPrice">
+          <label for="priceInput">Target Price</label>
+          <input type="number" id="priceInput" name="targetPrice" min="0" step="0.01">
+        </div>
+
+        <div class="form-group" id="percentDrop" style="display: none;">
+          <label for="percentInput">Price Drop Percentage</label>
+          <input type="number" id="percentInput" name="percentDrop" min="1" max="100">
+        </div>
+
+        <button type="submit" class="cta-button">Create Alert</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Price History -->
+  <section class="price-history">
+    <div class="container">
+      <h2>Price History</h2>
+      <div class="chart-container">
+        <canvas id="priceChart"></canvas>
+      </div>
+      <div class="chart-legend">
+        <div class="legend-item">
+          <span class="legend-color" style="background: #2563eb"></span>
+          <span>Price History</span>
+        </div>
+        <div class="legend-item">
+          <span class="legend-color" style="background: #dc2626"></span>
+          <span>Alert Price</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Active Alerts -->
+  <section class="active-alerts">
+    <div class="container">
+      <h2>Your Active Alerts</h2>
+      <div id="alertsList" class="alert-list">
+        <!-- Alert items will be dynamically added here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <!-- Footer content from main template -->
+  </footer>
+
+  <script src="/js/price-tracker.js"></script>
+</body>
+</html>
