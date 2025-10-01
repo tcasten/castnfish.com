@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="User profile and achievements on CastnFish">
+    <title>Profile | CastnFish Community</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/profile.css">
+</head>
+<body>
+    <main class="profile-main">
+        <div class="profile-header">
+            <div class="container">
+                <div class="profile-cover">
+                    <!-- Cover photo will be set as background image via CSS -->
+                </div>
+                <div class="profile-info">
+                    <div class="profile-avatar">
+                        <img src="/images/avatars/default.png" alt="Profile avatar" id="profileAvatar">
+                        <button class="edit-avatar" title="Change avatar">
+                            <i class="fas fa-camera"></i>
+                        </button>
+                    </div>
+                    <div class="profile-meta">
+                        <h1 class="profile-name">Loading...</h1>
+                        <p class="profile-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Location loading...</span>
+                        </p>
+                        <p class="profile-join-date">
+                            <i class="fas fa-calendar"></i>
+                            Member since: <span>Loading...</span>
+                        </p>
+                    </div>
+                    <div class="profile-actions">
+                        <a href="/community/profile/settings" class="btn btn-secondary">
+                            <i class="fas fa-cog"></i> Edit Profile
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="profile-layout">
+                <div class="profile-main-content">
+                    <section class="profile-about">
+                        <h2>About</h2>
+                        <div class="about-content" id="aboutContent">
+                            Loading bio...
+                        </div>
+                    </section>
+
+                    <section class="profile-stats">
+                        <h2>Fishing Stats</h2>
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-value">0</div>
+                                <div class="stat-label">Total Catches</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-value">0</div>
+                                <div class="stat-label">Species Caught</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-value">0</div>
+                                <div class="stat-label">Fishing Trips</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-value">0</div>
+                                <div class="stat-label">Events Attended</div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="profile-achievements">
+                        <h2>Achievements</h2>
+                        <div class="achievements-grid" id="achievementsGrid">
+                            <!-- Achievements will be populated by JavaScript -->
+                        </div>
+                    </section>
+
+                    <section class="recent-activity">
+                        <h2>Recent Activity</h2>
+                        <div class="activity-feed" id="activityFeed">
+                            <!-- Activity items will be populated by JavaScript -->
+                        </div>
+                    </section>
+                </div>
+
+                <aside class="profile-sidebar">
+                    <section class="favorite-spots">
+                        <h3>Favorite Spots</h3>
+                        <div class="spots-list" id="favoriteSpots">
+                            <!-- Favorite spots will be populated by JavaScript -->
+                        </div>
+                    </section>
+
+                    <section class="fishing-gear">
+                        <h3>Fishing Gear</h3>
+                        <div class="gear-list" id="gearList">
+                            <!-- Gear list will be populated by JavaScript -->
+                        </div>
+                    </section>
+
+                    <section class="badges">
+                        <h3>Badges</h3>
+                        <div class="badges-grid" id="badgesGrid">
+                            <!-- Badges will be populated by JavaScript -->
+                        </div>
+                    </section>
+
+                    <section class="upcoming-events">
+                        <h3>Upcoming Events</h3>
+                        <div class="events-list" id="upcomingEvents">
+                            <!-- Events will be populated by JavaScript -->
+                        </div>
+                    </section>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Templates -->
+    <template id="achievementTemplate">
+        <div class="achievement-card">
+            <div class="achievement-icon">
+                <i class="fas"></i>
+            </div>
+            <div class="achievement-details">
+                <h4 class="achievement-title"></h4>
+                <p class="achievement-description"></p>
+                <div class="achievement-progress">
+                    <div class="progress-bar"></div>
+                    <span class="progress-text"></span>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="activityTemplate">
+        <div class="activity-item">
+            <div class="activity-icon">
+                <i class="fas"></i>
+            </div>
+            <div class="activity-details">
+                <p class="activity-text"></p>
+                <span class="activity-date"></span>
+            </div>
+        </div>
+    </template>
+
+    <template id="spotTemplate">
+        <div class="spot-card">
+            <img src="" alt="Spot image" class="spot-image">
+            <div class="spot-details">
+                <h4 class="spot-name"></h4>
+                <p class="spot-location"></p>
+            </div>
+        </div>
+    </template>
+
+    <template id="gearTemplate">
+        <div class="gear-item">
+            <img src="" alt="Gear image" class="gear-image">
+            <div class="gear-details">
+                <h4 class="gear-name"></h4>
+                <p class="gear-category"></p>
+            </div>
+        </div>
+    </template>
+
+    <template id="badgeTemplate">
+        <div class="badge-item">
+            <div class="badge-icon">
+                <i class="fas"></i>
+            </div>
+            <div class="badge-tooltip">
+                <h4 class="badge-name"></h4>
+                <p class="badge-description"></p>
+            </div>
+        </div>
+    </template>
+
+    <script src="/js/shared.js"></script>
+    <script src="/js/profile.js"></script>
+</body>
+</html>
