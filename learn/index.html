@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn from the Experts - CastnFish.com</title>
+    <meta name="description" content="Master every water adventure with expert guides, tutorials, and tips from seasoned professionals.">
+    <link rel="stylesheet" href="/css/core.css">
+    <link rel="stylesheet" href="/css/learn.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container nav-container">
+            <a href="/" class="nav-brand">CastnFish</a>
+            
+            <ul class="nav-menu">
+                <li><a href="/shop" class="nav-link">Shop</a></li>
+                <li><a href="/learn" class="nav-link active">Learn</a></li>
+                <li><a href="/explore" class="nav-link">Explore</a></li>
+                <li><a href="/community" class="nav-link">Community</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="search-toggle" aria-label="Search">
+                    <svg width="20" height="20" fill="none" stroke="currentColor">
+                        <path d="M19 19l-4.35-4.35M17 9A8 8 0 111 9a8 8 0 0116 0z" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Learn Hero -->
+    <section class="learn-hero">
+        <div class="hero-bg">
+            <img src="/images/learn-hero.jpg" alt="Father teaching child to fish">
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Learn from the Experts</h1>
+                <p>Guides, tutorials, and tips to master every water adventure.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories">
+        <div class="container">
+            <div class="category-grid">
+                <a href="/learn/fishing" class="category-card">
+                    <img src="/images/category-fishing.jpg" alt="Fishing tutorials">
+                    <h2>Fishing</h2>
+                </a>
+                <a href="/learn/boating" class="category-card">
+                    <img src="/images/category-boating.jpg" alt="Boating guides">
+                    <h2>Boating</h2>
+                </a>
+                <a href="/learn/water-sports" class="category-card">
+                    <img src="/images/category-water-sports.jpg" alt="Water sports tutorials">
+                    <h2>Water Sports</h2>
+                </a>
+                <a href="/learn/camping" class="category-card">
+                    <img src="/images/category-camping.jpg" alt="Camping by water guides">
+                    <h2>Camping by Water</h2>
+                </a>
+                <a href="/learn/maintenance" class="category-card">
+                    <img src="/images/category-maintenance.jpg" alt="Gear maintenance tutorials">
+                    <h2>Gear Maintenance</h2>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Guides -->
+    <section class="featured-guides">
+        <div class="container">
+            <h2 class="section-title">Featured Guides</h2>
+            <div class="guide-grid">
+                <article class="guide-card">
+                    <img src="/images/guide-bass-fishing.jpg" alt="Bass fishing guide">
+                    <div class="guide-content">
+                        <h3>Beginner's Guide to Bass Fishing</h3>
+                        <p>Master the fundamentals of bass fishing with our comprehensive guide for newcomers.</p>
+                        <a href="/learn/fishing/beginners-guide-bass-fishing" class="guide-link">Read Guide →</a>
+                    </div>
+                </article>
+                <article class="guide-card">
+                    <img src="/images/guide-boating-safety.jpg" alt="Boating safety guide">
+                    <div class="guide-content">
+                        <h3>Boating Safety 101</h3>
+                        <p>Essential safety tips and regulations every boater needs to know before heading out.</p>
+                        <a href="/learn/boating/boating-safety-101" class="guide-link">Read Guide →</a>
+                    </div>
+                </article>
+                <article class="guide-card">
+                    <img src="/images/guide-paddleboarding.jpg" alt="Paddleboarding guide">
+                    <div class="guide-content">
+                        <h3>Paddleboarding Basics</h3>
+                        <p>Learn the essential techniques and tips for getting started with paddleboarding.</p>
+                        <a href="/learn/water-sports/paddleboarding-basics" class="guide-link">Read Guide →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Library Preview -->
+    <section class="video-library">
+        <div class="container">
+            <h2 class="section-title">How-To Videos</h2>
+            <div class="video-carousel">
+                <!-- Video cards will be dynamically populated -->
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="/images/video-cast.jpg" alt="How to cast properly">
+                        <button class="play-button" aria-label="Play video">
+                            <svg width="24" height="24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3>Perfect Your Cast</h3>
+                    <p>3:45 min</p>
+                </div>
+                <!-- More video cards -->
+            </div>
+            <div class="carousel-controls">
+                <button class="prev" aria-label="Previous video">←</button>
+                <button class="next" aria-label="Next video">→</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="learn-cta">
+        <div class="container">
+            <h2>Ready to Dive Deeper?</h2>
+            <p>Access our complete library of guides, tutorials, and expert tips.</p>
+            <a href="/learn/all" class="cta-button">View All Guides</a>
+        </div>
+    </section>
+
+    <script>
+        // Video carousel functionality
+        const carousel = document.querySelector('.video-carousel');
+        const prevButton = document.querySelector('.carousel-controls .prev');
+        const nextButton = document.querySelector('.carousel-controls .next');
+
+        prevButton.addEventListener('click', () => {
+            carousel.scrollBy({ left: -300, behavior: 'smooth' });
+        });
+
+        nextButton.addEventListener('click', () => {
+            carousel.scrollBy({ left: 300, behavior: 'smooth' });
+        });
+
+        // Play button functionality
+        document.querySelectorAll('.play-button').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const videoId = e.currentTarget.dataset.videoId;
+                // Open video player modal
+                console.log('Play video:', videoId);
+            });
+        });
+    </script>
+</body>
+</html>

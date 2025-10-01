@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Destinations - CastnFish.com</title>
+    <meta name="description" content="Discover the best fishing spots, boating routes, and water adventure destinations with our curated guides and interactive tools.">
+    <link rel="stylesheet" href="/css/core.css">
+    <link rel="stylesheet" href="/css/explore.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container nav-container">
+            <a href="/" class="nav-brand">CastnFish</a>
+            
+            <ul class="nav-menu">
+                <li><a href="/shop" class="nav-link">Shop</a></li>
+                <li><a href="/learn" class="nav-link">Learn</a></li>
+                <li><a href="/explore" class="nav-link active">Explore</a></li>
+                <li><a href="/community" class="nav-link">Community</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="search-toggle" aria-label="Search">
+                    <svg width="20" height="20" fill="none" stroke="currentColor">
+                        <path d="M19 19l-4.35-4.35M17 9A8 8 0 111 9a8 8 0 0116 0z" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Explore Hero -->
+    <section class="explore-hero">
+        <div class="hero-bg">
+            <img src="/images/explore-hero.jpg" alt="Scenic waterway">
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Explore Destinations</h1>
+                <p>Plan your next adventure with our curated guides.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Map -->
+    <section class="map-section">
+        <div class="container">
+            <div class="map-container">
+                <div id="map"></div>
+                <div class="map-filters">
+                    <button class="filter-btn active" data-filter="fishing">Fishing Spots</button>
+                    <button class="filter-btn" data-filter="boating">Boating Routes</button>
+                    <button class="filter-btn" data-filter="diving">Diving Spots</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destination Cards -->
+    <section class="destinations">
+        <div class="container">
+            <h2 class="section-title">Popular Destinations</h2>
+            <div class="destination-grid">
+                <article class="destination-card">
+                    <img src="/images/destination-bass-lakes.jpg" alt="Bass fishing lake">
+                    <div class="destination-content">
+                        <h3>Top 10 Bass Fishing Lakes in the U.S.</h3>
+                        <p>From Lake Fork to Lake Okeechobee, discover America's premier bass fishing destinations.</p>
+                        <a href="/explore/top-bass-fishing-lakes" class="destination-link">Explore Lakes →</a>
+                    </div>
+                </article>
+                <article class="destination-card">
+                    <img src="/images/destination-paddleboarding.jpg" alt="Paddleboarding spot">
+                    <div class="destination-content">
+                        <h3>Best Paddleboarding Spots</h3>
+                        <p>Crystal clear waters and stunning views await at these top paddleboarding destinations.</p>
+                        <a href="/explore/paddleboarding-spots" class="destination-link">Find Spots →</a>
+                    </div>
+                </article>
+                <article class="destination-card">
+                    <img src="/images/destination-boating-routes.jpg" alt="Scenic boating route">
+                    <div class="destination-content">
+                        <h3>Scenic Boating Routes</h3>
+                        <p>Chart your course through these breathtaking waterways and hidden gems.</p>
+                        <a href="/explore/scenic-boating-routes" class="destination-link">View Routes →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trip Planning Tools -->
+    <section class="trip-tools">
+        <div class="container">
+            <h2 class="section-title">Trip Planning Tools</h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor">
+                            <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Packing List Generator</h3>
+                    <p>Create a customized packing list based on your activity and destination.</p>
+                    <button class="tool-btn" data-tool="packing-list">Create List</button>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor">
+                            <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Seasonal Fishing Calendar</h3>
+                    <p>Find the best times to catch different species throughout the year.</p>
+                    <button class="tool-btn" data-tool="fishing-calendar">View Calendar</button>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor">
+                            <path d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>License & Regulation Lookup</h3>
+                    <p>Quick access to fishing licenses and local regulations.</p>
+                    <button class="tool-btn" data-tool="regulations">Look Up</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="explore-cta">
+        <div class="container">
+            <h2>Ready for Your Next Adventure?</h2>
+            <p>Use our trip planner to create your perfect water getaway.</p>
+            <a href="/explore/plan" class="cta-button">Plan Your Trip</a>
+        </div>
+    </section>
+
+    <script>
+        // Initialize map
+        mapboxgl.accessToken = 'YOUR_MAPBOX_TOKEN';
+        const map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/outdoors-v12',
+            center: [-98.5795, 39.8283], // Center of US
+            zoom: 3
+        });
+
+        // Filter buttons
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                document.querySelector('.filter-btn.active').classList.remove('active');
+                button.classList.add('active');
+                // Update map markers based on filter
+                updateMapMarkers(button.dataset.filter);
+            });
+        });
+
+        // Tool buttons
+        document.querySelectorAll('.tool-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const tool = button.dataset.tool;
+                openTool(tool);
+            });
+        });
+
+        function updateMapMarkers(filter) {
+            // Update map markers based on selected filter
+            console.log('Updating markers for:', filter);
+        }
+
+        function openTool(tool) {
+            // Open the selected planning tool
+            console.log('Opening tool:', tool);
+        }
+    </script>
+</body>
+</html>

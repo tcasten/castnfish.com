@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fishing Gear - CastnFish.com</title>
+    <meta name="description" content="Premium fishing gear curated for every angler. Rods, reels, tackle, and expert-picked bundles for beginners to pros.">
+    <link rel="stylesheet" href="/css/core.css">
+    <link rel="stylesheet" href="/css/shop.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container nav-container">
+            <a href="/" class="nav-brand">CastnFish</a>
+            
+            <ul class="nav-menu">
+                <li><a href="/shop" class="nav-link active">Shop</a></li>
+                <li><a href="/learn" class="nav-link">Learn</a></li>
+                <li><a href="/explore" class="nav-link">Explore</a></li>
+                <li><a href="/community" class="nav-link">Community</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="search-toggle" aria-label="Search">
+                    <svg width="20" height="20" fill="none" stroke="currentColor">
+                        <path d="M19 19l-4.35-4.35M17 9A8 8 0 111 9a8 8 0 0116 0z" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <a href="/cart" class="cart-link" aria-label="Cart">
+                    <svg width="20" height="20" fill="none" stroke="currentColor">
+                        <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="/">Home</a>
+            <span class="separator">/</span>
+            <a href="/shop">Shop</a>
+            <span class="separator">/</span>
+            <span class="current">Fishing</span>
+        </div>
+    </div>
+
+    <!-- Category Hero -->
+    <section class="category-hero">
+        <div class="hero-bg">
+            <img src="/images/fishing-hero.jpg" alt="Angler casting line at sunset">
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Fishing Gear</h1>
+                <p>Curated gear for every angler, from beginner to pro.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="shop-layout">
+        <div class="container">
+            <div class="shop-grid">
+                <!-- Filters Sidebar -->
+                <aside class="filters">
+                    <div class="filter-group">
+                        <h3>Activity</h3>
+                        <label class="filter-option">
+                            <input type="radio" name="activity" value="fishing" checked>
+                            <span>Fishing</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="activity" value="boating">
+                            <span>Boating</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="activity" value="water-sports">
+                            <span>Water Sports</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="activity" value="camping">
+                            <span>Camping</span>
+                        </label>
+                    </div>
+
+                    <div class="filter-group">
+                        <h3>Price Range</h3>
+                        <div class="price-slider">
+                            <input type="range" min="0" max="1000" value="500">
+                            <div class="price-inputs">
+                                <input type="number" value="0" min="0">
+                                <span>to</span>
+                                <input type="number" value="500" max="1000">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h3>Brand</h3>
+                        <div class="filter-search">
+                            <input type="text" placeholder="Search brands...">
+                        </div>
+                        <div class="brand-options">
+                            <!-- Dynamically populated -->
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h3>Skill Level</h3>
+                        <label class="filter-option">
+                            <input type="checkbox" name="skill" value="beginner">
+                            <span>Beginner</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="skill" value="intermediate">
+                            <span>Intermediate</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="skill" value="advanced">
+                            <span>Advanced</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="skill" value="pro">
+                            <span>Professional</span>
+                        </label>
+                    </div>
+
+                    <div class="filter-group">
+                        <h3>Customer Rating</h3>
+                        <div class="rating-options">
+                            <!-- Star rating filters -->
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Product Grid -->
+                <div class="products">
+                    <!-- Featured Bundle -->
+                    <div class="featured-bundle">
+                        <div class="bundle-content">
+                            <h2>Weekend Lake Kit – Save 20%</h2>
+                            <p>Everything you need for a perfect weekend of fishing.</p>
+                            <ul class="bundle-items">
+                                <li>Premium Spinning Rod & Reel Combo</li>
+                                <li>Tackle Box with Essential Lures</li>
+                                <li>Fishing Line & Tools</li>
+                                <li>Waterproof Gear Bag</li>
+                            </ul>
+                            <div class="bundle-price">
+                                <span class="original">$299.99</span>
+                                <span class="discounted">$239.99</span>
+                            </div>
+                            <button class="bundle-cta">Add Bundle to Cart</button>
+                        </div>
+                        <img src="/images/weekend-bundle.jpg" alt="Weekend Lake Kit Bundle" class="bundle-image">
+                    </div>
+
+                    <!-- Product Grid -->
+                    <div class="product-grid">
+                        <!-- Product cards will be dynamically populated -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Newsletter CTA -->
+    <section class="newsletter-cta">
+        <div class="container">
+            <h2>Get Weekly Gear Deals</h2>
+            <p>Be the first to know about new products and exclusive offers.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Footer content -->
+    </footer>
+
+    <script>
+        // Product data structure
+        const products = [
+            {
+                id: 'rod-001',
+                name: 'St. Croix Premier Spinning Rod',
+                price: 159.99,
+                rating: 4.8,
+                image: '/images/products/rod-001.jpg',
+                amazonUrl: 'https://amazon.com/dp/B07NF8DKVY?tag=castnfish-20'
+            },
+            // More products...
+        ];
+
+        // Filter handling
+        document.querySelectorAll('.filter-option input').forEach(input => {
+            input.addEventListener('change', updateProducts);
+        });
+
+        // Price slider handling
+        const priceSlider = document.querySelector('.price-slider input[type="range"]');
+        priceSlider.addEventListener('input', updateProducts);
+
+        function updateProducts() {
+            // Filter products based on selected options
+            // Update product grid
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            updateProducts();
+        });
+    </script>
+</body>
+</html>
