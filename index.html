@@ -8,6 +8,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/activity-highlight.css">
+  <link rel="stylesheet" href="/css/enhanced-styles.css">
+  <link rel="stylesheet" href="/css/image-optimization.css">
+  <link rel="stylesheet" href="/css/content-sections.css">
+  <link rel="stylesheet" href="/css/sections.css">
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
+  <script src="/js/content-interactions.js" defer>
 </head>
 <body>
   <!-- Header -->
@@ -76,7 +84,45 @@
         <a href="/community" class="cta-button secondary">Join Community</a>
       </div>
     </div>
-    <div class="hero-overlay"></div>
+    <div class="wave-divider"></div>
+    <div class="wave-divider wave-2"></div>
+    <div class="wave-divider wave-3"></div>
+  </section>
+
+  <!-- Activity Tracking -->
+  <section class="activity-highlight">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Track Your Fishing Journey</h2>
+        <p class="section-subtitle">Log catches, plan trips, and earn achievements</p>
+      </div>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <i class="fas fa-fish"></i>
+          <h3>Log Your Catches</h3>
+          <p>Record every catch with photos, species, location, and more. Build your fishing history.</p>
+          <a href="/community/activity" class="feature-link">Start Logging</a>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-map-marked-alt"></i>
+          <h3>Track Your Trips</h3>
+          <p>Document your fishing trips, favorite spots, and conditions. Plan better adventures.</p>
+          <a href="/community/activity" class="feature-link">Plan a Trip</a>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-chart-line"></i>
+          <h3>View Statistics</h3>
+          <p>Analyze your progress with detailed charts and insights about your fishing activities.</p>
+          <a href="/community/activity" class="feature-link">See Your Stats</a>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-trophy"></i>
+          <h3>Earn Achievements</h3>
+          <p>Complete challenges and unlock achievements as you grow your fishing expertise.</p>
+          <a href="/community/activity" class="feature-link">View Achievements</a>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Shop Categories -->
@@ -88,16 +134,351 @@
       </div>
       <div class="category-grid">
         <a href="/shop/fishing" class="category-tile">
-          <div class="category-icon">🎣</div>
-          <h3>Fishing</h3>
-          <p>Rods, reels, tackle & more</p>
+          <img src="/images/categories/fishing-category.jpg" 
+               srcset="/images/categories/fishing-category-mobile.jpg 480w,
+                       /images/categories/fishing-category-tablet.jpg 768w,
+                       /images/categories/fishing-category.jpg 1200w"
+               sizes="(max-width: 480px) 100vw,
+                      (max-width: 768px) 50vw,
+                      33vw"
+               alt="Fishing Equipment"
+               loading="lazy">
+          <div class="category-content">
+            <h3>Fishing</h3>
+            <p>Rods, reels, tackle & more</p>
+          </div>
         </a>
         <a href="/shop/boating" class="category-tile">
-          <div class="category-icon">🚤</div>
-          <h3>Boating</h3>
-          <p>Kayaks, safety gear & accessories</p>
+          <img src="/images/categories/boating-category.jpg"
+               srcset="/images/categories/boating-category-mobile.jpg 480w,
+                       /images/categories/boating-category-tablet.jpg 768w,
+                       /images/categories/boating-category.jpg 1200w"
+               sizes="(max-width: 480px) 100vw,
+                      (max-width: 768px) 50vw,
+                      33vw"
+               alt="Boating Equipment"
+               loading="lazy">
+          <div class="category-content">
+            <h3>Boating</h3>
+            <p>Kayaks, safety gear & accessories</p>
+          </div>
         </a>
         <a href="/shop/water-sports" class="category-tile">
+          <img src="/images/categories/water-sports-category.jpg"
+               srcset="/images/categories/water-sports-category-mobile.jpg 480w,
+                       /images/categories/water-sports-category-tablet.jpg 768w,
+                       /images/categories/water-sports-category.jpg 1200w"
+               sizes="(max-width: 480px) 100vw,
+                      (max-width: 768px) 50vw,
+                      33vw"
+               alt="Water Sports Equipment"
+               loading="lazy">
+          <div class="category-content">
+            <h3>Water Sports</h3>
+            <p>Equipment for surfing, skiing & more</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products -->
+  <section class="featured-products">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Top Picks This Season</h2>
+        <p class="section-subtitle">Curated gear for your next adventure</p>
+      </div>
+      <div class="product-slider">
+        <div class="product-card">
+          <div class="product-badge">New</div>
+          <img src="/images/products/premium-rod.jpg" alt="Premium Fishing Rod" loading="lazy">
+          <div class="product-info">
+            <h3>Premium Carbon Fiber Rod</h3>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half"></i>
+              <span>(128)</span>
+            </div>
+            <div class="product-price">
+              <span class="current-price">$299.99</span>
+              <span class="original-price">$399.99</span>
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+        <!-- More product cards here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest News & Tips -->
+  <section class="news-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Latest From The Water</h2>
+        <p class="section-subtitle">News, tips, and community highlights</p>
+      </div>
+      <div class="news-grid">
+        <article class="featured-article">
+          <img src="/images/blog/seasonal-fishing.jpg" alt="Seasonal Fishing Guide" loading="lazy">
+          <div class="article-content">
+            <div class="article-meta">
+              <span class="category">Guides</span>
+              <span class="date">October 1, 2025</span>
+            </div>
+            <h3>Complete Guide to Fall Fishing</h3>
+            <p>Discover the best techniques and spots for autumn fishing as temperatures drop and fish patterns change.</p>
+            <a href="/blog/fall-fishing-guide" class="read-more">Read More</a>
+          </div>
+        </article>
+        <div class="news-sidebar">
+          <article class="news-card">
+            <div class="article-meta">
+              <span class="category">Community</span>
+              <span class="date">September 30, 2025</span>
+            </div>
+            <h4>Monthly Fishing Challenge Winners Announced</h4>
+            <p>See who caught the biggest bass this month and learn their techniques.</p>
+          </article>
+          <article class="news-card">
+            <div class="article-meta">
+              <span class="category">Tips</span>
+              <span class="date">September 29, 2025</span>
+            </div>
+            <h4>Essential Knots Every Angler Should Know</h4>
+            <p>Master these five crucial knots to improve your fishing game.</p>
+          </article>
+          <article class="news-card">
+            <div class="article-meta">
+              <span class="category">Gear</span>
+              <span class="date">September 28, 2025</span>
+            </div>
+            <h4>2026 Gear Preview: What's Coming</h4>
+            <p>Get a sneak peek at next year's most anticipated fishing gear.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community Highlights -->
+  <section class="community-highlights">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Community Catches</h2>
+        <p class="section-subtitle">Recent highlights from our anglers</p>
+      </div>
+      <div class="catches-grid">
+        <div class="catch-card">
+          <img src="/images/catches/bass-catch.jpg" alt="Large Bass Catch" loading="lazy">
+          <div class="catch-info">
+            <div class="angler-info">
+              <img src="/images/avatars/user1.jpg" alt="Angler" class="avatar">
+              <span class="name">Mike T.</span>
+            </div>
+            <div class="catch-details">
+              <span class="species">Largemouth Bass</span>
+              <span class="weight">8.5 lbs</span>
+              <span class="location">Lake Travis, TX</span>
+            </div>
+          </div>
+        </div>
+        <!-- More catch cards here -->
+      </div>
+      <div class="view-more-wrapper">
+        <a href="/community/catches" class="view-more-btn">View More Catches</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Map -->
+  <section class="fishing-map">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Explore Fishing Spots</h2>
+        <p class="section-subtitle">Discover the best locations near you</p>
+      </div>
+      <div class="map-container">
+        <div id="fishingMap"></div>
+        <div class="map-sidebar">
+          <div class="map-filters">
+            <select id="spotType">
+              <option value="all">All Spots</option>
+              <option value="lake">Lakes</option>
+              <option value="river">Rivers</option>
+              <option value="ocean">Ocean</option>
+              <option value="pier">Piers</option>
+            </select>
+            <select id="fishType">
+              <option value="all">All Species</option>
+              <option value="bass">Bass</option>
+              <option value="trout">Trout</option>
+              <option value="salmon">Salmon</option>
+              <option value="catfish">Catfish</option>
+            </select>
+          </div>
+          <div class="spot-list">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Weather Forecast -->
+  <section class="weather-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Fishing Weather</h2>
+        <p class="section-subtitle">Plan your trip with detailed forecasts</p>
+      </div>
+      <div class="weather-grid">
+        <div class="current-conditions">
+          <div class="weather-card primary">
+            <div class="weather-header">
+              <h3>Current Conditions</h3>
+              <span class="location">Lake Travis, TX</span>
+            </div>
+            <div class="weather-body">
+              <div class="weather-icon">
+                <i class="fas fa-sun"></i>
+              </div>
+              <div class="weather-info">
+                <span class="temperature">72°F</span>
+                <span class="conditions">Clear Sky</span>
+              </div>
+              <div class="weather-details">
+                <div class="detail">
+                  <i class="fas fa-wind"></i>
+                  <span>8 mph SW</span>
+                </div>
+                <div class="detail">
+                  <i class="fas fa-tint"></i>
+                  <span>45%</span>
+                </div>
+                <div class="detail">
+                  <i class="fas fa-water"></i>
+                  <span>72°F</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="forecast-grid">
+          <!-- Forecast cards dynamically populated -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events Calendar -->
+  <section class="events-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Upcoming Events</h2>
+        <p class="section-subtitle">Tournaments, workshops, and community meetups</p>
+      </div>
+      <div class="calendar-container">
+        <div class="calendar-nav">
+          <button class="prev-month"><i class="fas fa-chevron-left"></i></button>
+          <h3 class="current-month">October 2025</h3>
+          <button class="next-month"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="calendar-grid">
+          <!-- Calendar days populated by JS -->
+        </div>
+        <div class="event-list">
+          <!-- Event details populated by JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gear Comparison -->
+  <section class="gear-comparison">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Compare Gear</h2>
+        <p class="section-subtitle">Find the perfect equipment for your needs</p>
+      </div>
+      <div class="comparison-tool">
+        <div class="comparison-filters">
+          <select id="gearCategory">
+            <option value="rods">Fishing Rods</option>
+            <option value="reels">Reels</option>
+            <option value="combos">Rod & Reel Combos</option>
+            <option value="lures">Lures</option>
+          </select>
+          <div class="price-range">
+            <label>Price Range:</label>
+            <input type="range" id="priceRange" min="0" max="1000" step="50">
+            <span class="price-display">$0 - $1000</span>
+          </div>
+        </div>
+        <div class="comparison-grid">
+          <!-- Product comparisons populated by JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <img src="/images/logo-white.png" alt="CastnFish" class="footer-logo">
+          <p>Your ultimate destination for water recreation, fishing gear, and outdoor adventures.</p>
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-nav">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/shop">Shop</a></li>
+            <li><a href="/learn">Learn</a></li>
+            <li><a href="/explore">Explore</a></li>
+            <li><a href="/community">Community</a></li>
+          </ul>
+        </div>
+        <div class="footer-categories">
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="/shop/fishing">Fishing Gear</a></li>
+            <li><a href="/shop/boating">Boating</a></li>
+            <li><a href="/shop/water-sports">Water Sports</a></li>
+            <li><a href="/shop/accessories">Accessories</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <p>
+            <i class="fas fa-phone"></i> (555) 123-4567<br>
+            <i class="fas fa-envelope"></i> support@castnfish.com<br>
+            <i class="fas fa-map-marker-alt"></i> 123 Fishing Lane<br>
+            Austin, TX 78701
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 CastnFish. All rights reserved.</p>
+        <ul class="legal-links">
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms of Service</a></li>
+          <li><a href="/shipping">Shipping Info</a></li>
+          <li><a href="/returns">Returns</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
           <div class="category-icon">🏄</div>
           <h3>Water Sports</h3>
           <p>Paddleboards, wakeboards & diving</p>
