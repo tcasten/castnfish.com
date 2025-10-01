@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 User-agent: *
 Allow: /
 
@@ -9,4 +10,17 @@ Crawl-delay: 1
 
 # Disallow certain paths (if any)
 # Disallow: /admin/
+=======
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://castnfish.com/sitemap.xml
+
+# Crawl delay (optional)
+Crawl-delay: 1
+
+# Disallow certain paths (if any)
+# Disallow: /admin/
+>>>>>>> 6e8f16f1d8be7f3285e200808898274e583673b7
 # Disallow: /private/
